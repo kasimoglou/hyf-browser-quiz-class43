@@ -13,48 +13,116 @@ export const quizData = {
   currentQuestionIndex: 0,
   // the questions in the quiz
   questions: [
-    {
-      text: 'What are the different ways to declare a JS variable?',
-      answers: {
-        a: 'constant, let, variable',
-        b: 'var, const, let, function',
-        c: 'var, let, const',
+      {
+        text: 'What country has the highest life expectancy?',
+        answers: {
+          a: 'Ethiopia',
+          b: 'Hong kong',
+          c: 'Gambia',
+          d: 'Syria',
+        },
+        correct: 'b',
+        selected: null,
       },
-      correct: 'c',
-      selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/variables',
+      {
+        text: 'Where would you be if you were standing on the Spanish Steps?',
+        answers: {
+          a: 'sicily',
+          b: 'italy',
+          c: 'mexico',
+          d: 'Rome',
         },
-        {
-          text: 'Tyler McGinnis',
-          href: 'https://ui.dev/var-let-const/',
-        },
-      ],
-    },
-    {
-      text: 'What does `typeof` do?',
-      answers: {
-        a: 'changes the type of a primitive value',
-        b: 'returns a string describing the type of a value',
-        c: 'determines if a value is primitive',
-        d: 'can tell the difference between arrays and objects',
+        correct: 'd',
+        selected: null,
       },
-      correct: 'b',
-      selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/types#type-typeof',
+      // Add more questions here
+      {
+        text: 'Which language has the more native speakers?',
+        answers: {
+          a: 'French',
+          b: 'English',
+          c: 'Spanish',
+          d: 'Arabic',
         },
-        {
-          text: 'MDN',
-          href:
-            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof',
+        correct: 'c',
+        selected: null,
+      },
+      {
+        text: 'How many minutes are in a full week?',
+        answers: {
+          a: '10,080',
+          b: '12,000',
+          c: '9,999',
+          d: '10,000',
         },
-      ],
-    },
-    // Add more questions here
-  ],
+        correct: 'a',
+        selected: null,
+      },
+      {
+        text: 'How many elements are in the periodic table? ',
+        answers: {
+          a: '89',
+          b: '118',
+          c: '114',
+          d: '100',
+        },
+        correct: 'b',
+        selected: null,
+      },
+      {
+        text: 'what is "usb" stands for ?',
+        answers: {
+          a: 'users should beware',
+          b: 'unique serial baby',
+          c: 'Universal Serial Bus',
+          d: 'universal series branch',
+        },
+        correct: 'c',
+        selected: null,
+      },
+      {
+        text: 'What does KFC stand for?',
+        answers: {
+          a: 'king fry chicken',
+          b: 'kentucky fry chiptole',
+          c: 'Kentucky Fried Chicken',
+          d: 'knife fighters club ',
+        },
+        correct: 'c',
+        selected: null,
+      },
+      {
+        text: 'in friends tv show what is joey catchphrase',
+        answers: {
+          a: 'HOW YOU DOIN?',
+          b: 'HEY, YOU?',
+          c: 'OMG!!',
+          d: 'Chandler bing',
+        },
+        correct: 'a',
+        selected: null,
+      },
+      {
+        text: 'What is Batman’s butler called?',
+        answers: {
+          a: 'The joker',
+          b: 'Alfred',
+          c: 'Bruce',
+          d: 'chandler',
+        },
+        correct: 'b',
+        selected: null,
+      },
+      {
+        text: 'what is the capital city of Netherlands?',
+        answers: {
+          a: 'Berlin',
+          b: 'Den Haag',
+          c: 'Amsterdam',
+          d: 'Alkmaar',
+        },
+        correct: 'c',
+        selected: null,
+      },
+    ],
 };
