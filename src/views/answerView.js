@@ -6,6 +6,7 @@
  */
 
 export const createAnswerElement = (key, answerText, correct) => {
+export const createAnswerElement = (key, answerText, correct) => {
   const element = document.createElement('li');
   element.innerHTML = String.raw`
     ${key}: ${answerText};
