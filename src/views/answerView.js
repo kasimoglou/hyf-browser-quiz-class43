@@ -15,20 +15,25 @@ export const createAnswerElement = (key, answerText, correct) => {
 
   let selected = false;
   
+
+  let selected = false;
+  
+
   element.addEventListener('click', () => {
-    let score = 0
+
      
-    if(!selected){
+    if (!selected) {
     const answerEls = document.querySelectorAll('li');
-    const scoreElement = document.getElementById('score');
-    answerEls.forEach((el) => {
-      if(el.getAttribute('dataset') !== correct){
-        el.style.pointerEvents = 'none';
-      }
+   answerEls.forEach((el) => {
+    if (el.getAttribute('dataSet') !== correct) {
+      el.style.pointerEvents = 'none';
+    }
       el.style.fontWeight = '';
+     el.style.backgroundColor = '';
      el.style.backgroundColor = '';
     });
     element.style.fontWeight = 'bold';
+
 
    
       if (key === correct) {
@@ -37,6 +42,13 @@ export const createAnswerElement = (key, answerText, correct) => {
         scoreElement.innerHTML = `Score: ${score}/10`;
       } else {
         element.style.backgroundColor = 'red';
+    if (key === correct) {
+      element.style.backgroundColor = 'green';
+      score++;
+      scoreEl.textContent = `Score: ${score}`; 
+      answeredCorrectly = true;
+    } else {
+      element.style.backgroundColor = 'red';
 
         if (document.querySelector(`li[dataSet="${correct}"]`)) {
           document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green';
@@ -45,8 +57,16 @@ export const createAnswerElement = (key, answerText, correct) => {
     }
     selected = true;
   }
+      if (document.querySelector(`li[dataSet="${correct}"]`)) {
+        document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green'; 
+    }
+  }
+  selected = true;
+
+  }
   }); 
   element.setAttribute('dataSet', key);
   return element;
 };
+
 
