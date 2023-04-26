@@ -6,37 +6,46 @@
  */
 
 const USER_INTERFACE_ID = 'user-interface';
-let score  = 0;
 
 export const createAnswerElement = (key, answerText, correct) => {
   const element = document.createElement('li');
   element.innerHTML = String.raw`
     ${key}: ${answerText};
   `;
+
+  let selected = false;
+  
+
   element.addEventListener('click', () => {
-    const answerEl = document.querySelectorAll('li');
-    answerEl.forEach((el) => {
+
+     
+    if (!selected) {
+    const answerEls = document.querySelectorAll('li');
+   answerEls.forEach((el) => {
+    if (el.getAttribute('dataSet') !== correct) {
+      el.style.pointerEvents = 'none';
+    }
       el.style.fontWeight = '';
-      el.style.backgroundColor = '';
+     el.style.backgroundColor = '';
     });
     element.style.fontWeight = 'bold';
+
    
     if (key === correct) {
       element.style.backgroundColor = 'green';
       score++;
-      
-
+      scoreEl.textContent = `Score: ${score}`; 
+      answeredCorrectly = true;
     } else {
       element.style.backgroundColor = 'red';
 
       if (document.querySelector(`li[dataSet="${correct}"]`)) {
-        document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green';
-      }
+        document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green'; 
     }
+  }
+  selected = true;
 
-    
-    scoreEl.textContent = `Score: ${score}`;
-
+  }
   }); 
 
   element.setAttribute('dataSet', key);
@@ -44,3 +53,4 @@ export const createAnswerElement = (key, answerText, correct) => {
 
   return element;
 };
+

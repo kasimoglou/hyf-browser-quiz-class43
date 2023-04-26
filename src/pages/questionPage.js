@@ -7,6 +7,7 @@ import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 
+
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
@@ -27,10 +28,20 @@ export const initQuestionPage = () => {
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
+
+   
+
 };
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
 
+
+  if (quizData.currentQuestionIndex === quizData.questions.length) {
+    finishQuiz();
+    return;
+  }
+
   initQuestionPage();
 };
+
