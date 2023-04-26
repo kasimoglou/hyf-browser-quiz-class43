@@ -19,9 +19,10 @@ export const createAnswerElement = (key, answerText, correct) => {
     const scoreElement = document.getElementById('score');
     answerEl.forEach((el) => {
       el.style.fontWeight = '';
-      el.style.backgroundColor = '';
+     el.style.backgroundColor = '';
     });
     element.style.fontWeight = 'bold';
+
    
       if (key === correct) {
         score++;
@@ -39,3 +40,4 @@ export const createAnswerElement = (key, answerText, correct) => {
   element.setAttribute('dataSet', key);
   return element;
 };
+
