@@ -20,13 +20,15 @@ export const initQuestionPage = () => {
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
 
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
-    const answerElement = createAnswerElement(key, answerText,currentQuestion.correct);
+    const answerElement = createAnswerElement(key, answerText,currentQuestion.correct,score);
     answersListElement.appendChild(answerElement);
+
   }
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
-    .addEventListener('click', nextQuestion);
+    .addEventListener('click', nextQuestion)
+    .getElementById(SCORE_ID);
 };
 
 const nextQuestion = () => {

@@ -6,41 +6,36 @@
  */
 
 const USER_INTERFACE_ID = 'user-interface';
-let score  = 0;
 
 export const createAnswerElement = (key, answerText, correct) => {
   const element = document.createElement('li');
   element.innerHTML = String.raw`
     ${key}: ${answerText};
   `;
+  
   element.addEventListener('click', () => {
+    let score = 0
     const answerEl = document.querySelectorAll('li');
+    const scoreElement = document.getElementById('score');
     answerEl.forEach((el) => {
       el.style.fontWeight = '';
       el.style.backgroundColor = '';
     });
     element.style.fontWeight = 'bold';
    
-    if (key === correct) {
-      element.style.backgroundColor = 'green';
-      score++;
-      
+      if (key === correct) {
+        score++;
+        element.style.backgroundColor = 'green';
+        scoreElement.innerHTML = `Score: ${score}/10`;
+      } else {
+        element.style.backgroundColor = 'red';
 
-    } else {
-      element.style.backgroundColor = 'red';
-
-      if (document.querySelector(`li[dataSet="${correct}"]`)) {
-        document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green';
-      }
+        if (document.querySelector(`li[dataSet="${correct}"]`)) {
+          document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green';
+          scoreElement.innerHTML = `Score: ${score}/10`;
+        }
     }
-
-    
-    scoreEl.textContent = `Score: ${score}`;
-
   }); 
-
   element.setAttribute('dataSet', key);
-
-
   return element;
 };
