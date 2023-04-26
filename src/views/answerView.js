@@ -5,7 +5,9 @@
  * @returns {Element}
  */
 
-export const createAnswerElement = (key, answerText, correct) => {
+const USER_INTERFACE_ID = 'user-interface';
+let score  = 0;
+
 export const createAnswerElement = (key, answerText, correct) => {
   const element = document.createElement('li');
   element.innerHTML = String.raw`
@@ -18,14 +20,27 @@ export const createAnswerElement = (key, answerText, correct) => {
       el.style.backgroundColor = '';
     });
     element.style.fontWeight = 'bold';
-    const score = 0;
+   
     if (key === correct) {
       element.style.backgroundColor = 'green';
       score++;
+      
+
     } else {
       element.style.backgroundColor = 'red';
+
+      if (document.querySelector(`li[dataSet="${correct}"]`)) {
+        document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green';
+      }
     }
-  });
+
+    
+    scoreEl.textContent = `Score: ${score}`;
+
+  }); 
+
+  element.setAttribute('dataSet', key);
+
 
   return element;
 };
