@@ -18,7 +18,7 @@ export const quizData = {
         answers: {
           a: 'Ethiopia',
           b: 'Hong kong',
-          c: 'Gambia',
+          c: 'Zambia',
           d: 'Syria',
         },
         correct: 'b',
