@@ -12,12 +12,19 @@ export const createAnswerElement = (key, answerText, correct) => {
   element.innerHTML = String.raw`
     ${key}: ${answerText};
   `;
+
+  let selected = false;
   
   element.addEventListener('click', () => {
     let score = 0
-    const answerEl = document.querySelectorAll('li');
+     
+    if(!selected){
+    const answerEls = document.querySelectorAll('li');
     const scoreElement = document.getElementById('score');
-    answerEl.forEach((el) => {
+    answerEls.forEach((el) => {
+      if(el.getAttribute('dataset') !== correct){
+        el.style.pointerEvents = 'none';
+      }
       el.style.fontWeight = '';
      el.style.backgroundColor = '';
     });
@@ -36,6 +43,8 @@ export const createAnswerElement = (key, answerText, correct) => {
           scoreElement.innerHTML = `Score: ${score}/10`;
         }
     }
+    selected = true;
+  }
   }); 
   element.setAttribute('dataSet', key);
   return element;
