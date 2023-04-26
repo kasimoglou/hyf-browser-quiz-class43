@@ -16,7 +16,7 @@ export const createAnswerElement = (key, answerText, correct) => {
   let selected = false;
   
 
-  let selected = false;
+  
   
 
   element.addEventListener('click', () => {
@@ -42,25 +42,14 @@ export const createAnswerElement = (key, answerText, correct) => {
         scoreElement.innerHTML = `Score: ${score}/10`;
       } else {
         element.style.backgroundColor = 'red';
-    if (key === correct) {
-      element.style.backgroundColor = 'green';
-      score++;
-      scoreEl.textContent = `Score: ${score}`; 
-      answeredCorrectly = true;
-    } else {
-      element.style.backgroundColor = 'red';
 
         if (document.querySelector(`li[dataSet="${correct}"]`)) {
           document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green';
           scoreElement.innerHTML = `Score: ${score}/10`;
         }
     }
-    selected = true;
-  }
-      if (document.querySelector(`li[dataSet="${correct}"]`)) {
-        document.querySelector(`li[dataSet="${correct}"]`).style.backgroundColor = 'green'; 
-    }
-  }
+  
+  
   selected = true;
 
   }
