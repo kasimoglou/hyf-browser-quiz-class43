@@ -14,9 +14,9 @@ export const createAnswerElement = (key, answerText, correct) => {
   `;
   element.addEventListener('click', () => {
     if (answerSelected) {
-      return; // don't do anything if an answer has already been selected
+      return;
     }
-    answerSelected = true; // mark that an answer has been selected
+    answerSelected = true;
     if (key === correct) {
       score++;
       element.style.backgroundColor = 'green';
@@ -30,7 +30,7 @@ export const createAnswerElement = (key, answerText, correct) => {
     }
     const scoreElement = document.getElementById('score');
     scoreElement.innerHTML = `Score: ${score}/${questionsNum}`;
-    answerSelected = false; // reset answerSelected to false
+    answerSelected = false;
   });
   element.setAttribute('dataSet', key);
   return element;
