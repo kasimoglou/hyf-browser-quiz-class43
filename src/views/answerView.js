@@ -12,16 +12,29 @@ export const createAnswerElement = (key, answerText, correct) => {
   element.innerHTML = String.raw`
     ${key}: ${answerText};
   `;
+
+  let selected = false;
   
+
+  
+  
+
   element.addEventListener('click', () => {
-    let score = 0
-    const answerEl = document.querySelectorAll('li');
-    const scoreElement = document.getElementById('score');
-    answerEl.forEach((el) => {
+
+     
+    if (!selected) {
+    const answerEls = document.querySelectorAll('li');
+   answerEls.forEach((el) => {
+    if (el.getAttribute('dataSet') !== correct) {
+      el.style.pointerEvents = 'none';
+    }
       el.style.fontWeight = '';
-      el.style.backgroundColor = '';
+     el.style.backgroundColor = '';
+     el.style.backgroundColor = '';
     });
     element.style.fontWeight = 'bold';
+
+
    
       if (key === correct) {
         score++;
@@ -35,7 +48,14 @@ export const createAnswerElement = (key, answerText, correct) => {
           scoreElement.innerHTML = `Score: ${score}/10`;
         }
     }
+  
+  
+  selected = true;
+
+  }
   }); 
   element.setAttribute('dataSet', key);
   return element;
 };
+
+
