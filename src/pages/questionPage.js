@@ -2,6 +2,7 @@ import {
   ANSWERS_LIST_ID,
   NEXT_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
+  SKIP_QUESTION_BUTTON_ID
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
@@ -24,25 +25,51 @@ export const initQuestionPage = () => {
     const answerElement = createAnswerElement(key, answerText,currentQuestion.correct,score);
     answersListElement.appendChild(answerElement);
 
+    answerElement.addEventListener('click', () => {
+      
+    });
+
   }
 
   document
-    .getElementById(NEXT_QUESTION_BUTTON_ID)
-    .addEventListener('click', nextQuestion);
+    .getElementById(NEXT_QUESTION_BUTTON_ID).addEventListener('click', nextQuestion)
 
-   
+    document.getElementById(SKIP_QUESTION_BUTTON_ID).addEventListener('click', skipQuestion);
+    
 
 };
+
+
+
+const skipQuestion = () => {
+   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+ 
+ 
+   if (quizData.currentQuestionIndex === quizData.questions.length && selected ) {
+     answerElement.style.backgroundColor = 'green';
+   }
+    
+   nextQuestion();
+ };
+
+
+
+
+
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
-
+  
 
   if (quizData.currentQuestionIndex === quizData.questions.length) {
     finishQuiz();
-    return;
+ 
+   return;
   }
-
+  
+  
+   
   initQuestionPage();
 };
+
 
