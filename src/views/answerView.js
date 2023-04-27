@@ -14,10 +14,8 @@ export const createAnswerElement = (key, answerText, correct) => {
   `;
 
   let selected = false;
-  
-
-  
-  
+  let score = 0
+  const scoreElement = document.getElementById('score');
 
   element.addEventListener('click', () => {
 
@@ -30,7 +28,6 @@ export const createAnswerElement = (key, answerText, correct) => {
     }
       el.style.fontWeight = '';
      el.style.backgroundColor = '';
-     el.style.backgroundColor = '';
     });
     element.style.fontWeight = 'bold';
 
@@ -40,6 +37,7 @@ export const createAnswerElement = (key, answerText, correct) => {
         score++;
         element.style.backgroundColor = 'green';
         scoreElement.innerHTML = `Score: ${score}/10`;
+       
       } else {
         element.style.backgroundColor = 'red';
 
