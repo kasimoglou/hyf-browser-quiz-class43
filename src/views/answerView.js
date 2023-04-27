@@ -2,7 +2,6 @@
   const questionsNum = 10;
   let score = 0;
   let answerSelected = false;
-  
 
 
 
@@ -15,13 +14,16 @@
 
 
 
-export const createAnswerElement = (key, answerText, correct) => {
+export const createAnswerElement = (key, answerText, correct, selected ) => {
   const element = document.createElement('li');
   element.innerHTML = String.raw`
     ${key}: ${answerText}
   `;
   
   answerSelected = false;
+
+
+
 
 
   const scoreElement = document.getElementById('score');
@@ -46,7 +48,6 @@ export const createAnswerElement = (key, answerText, correct) => {
        if (key === correct) {
       score++;
       element.style.backgroundColor = 'green';
-  
       
     } else {
       element.style.backgroundColor = 'red';
@@ -56,6 +57,7 @@ export const createAnswerElement = (key, answerText, correct) => {
         
       }
     }
+    
     answerSelected = true;
     
     scoreElement.innerHTML = `Score: ${score}/${questionsNum}`;
