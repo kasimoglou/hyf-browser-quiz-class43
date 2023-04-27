@@ -12,6 +12,7 @@ export const createAnswerElement = (key, answerText, correct) => {
   element.innerHTML = String.raw`
     ${key}: ${answerText}
   `;
+
   element.addEventListener('click', () => {
     if (answerSelected) {
       return;
@@ -32,6 +33,9 @@ export const createAnswerElement = (key, answerText, correct) => {
     scoreElement.innerHTML = `Score: ${score}/${questionsNum}`;
     answerSelected = false;
   });
+ 
   element.setAttribute('dataSet', key);
   return element;
 };
+
+
