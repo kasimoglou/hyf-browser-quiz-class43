@@ -21,7 +21,6 @@ export const initQuestionPage = () => {
   userInterface.appendChild(questionElement);
 
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
-
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(
       key,
@@ -60,9 +59,18 @@ const result = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
 
-  const resultElement = document.createElement('div');
-  resultElement.innerText = `Congratulations on Completing the Quiz!!\nYou got ${score} out of ${quizData.questions.length} questions correct!`;
-
+   const resultElement = document.createElement('div');
+//  resultElement.innerText = `Congratulations on Completing the Quiz!!\nYou got ${score} out of ${quizData.questions.length} questions correct!`;
+  if (`${score}` > 7) {
+    resultElement.innerText = `Congratulations on Completing the Quiz with ${score} out of ${quizData.questions.length -1}!! 🎉🎉🎉`
+  }
+  else if (score > 5 && `${score}` < 7) {
+    resultElement.innerText = `Nice try on Completing the Quiz with ${score} out of ${quizData.questions.length -1} 👍🏽`
+  }
+  else if (`${score}` < 5) {
+    resultElement.innerText = `You Completed the Quiz with ${score} out of ${quizData.questions.length -1}, you can always try again 😕`
+  }
+  resultElement.style.fontSize = '1.5rem'
   // const restartButton = document.createElement('button');
   // restartButton.innerText = 'Restart Quiz';
   // restartButton.addEventListener('click', () => {

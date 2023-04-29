@@ -122,7 +122,15 @@ export const quizData = {
         c: 'Amsterdam',
         d: 'Alkmaar',
       },
-      correct: 'b',
+      correct: 'c',
+      selected: null,
+    },
+     {
+      text: '',
+      answers: {
+      
+      },
+      correct: '',
       selected: null,
     },
   ],
