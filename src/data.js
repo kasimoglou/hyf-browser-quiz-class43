@@ -44,40 +44,10 @@ export const quizData = {
         c: 'Spanish',
         d: 'Arabic',
       },
+      correct : 'c',
+      selected:null,
     },
-    {
-      text: 'What country has the highest life expectancy?',
-      answers: {
-        a: 'Ethiopia',
-        b: 'Hong kong',
-        c: 'Zambia',
-        d: 'Syria',
-      },
-      correct: 'b',
-      selected: null,
-    },
-    {
-      text: 'Where would you be if you were standing on the Spanish Steps?',
-      answers: {
-        a: 'Sicily',
-        b: 'Italy',
-        c: 'Mexico',
-        d: 'Rome',
-      },
-      correct: 'd',
-      selected: null,
-    },
-    {
-      text: 'Which language has the more native speakers?',
-      answers: {
-        a: 'French',
-        b: 'English',
-        c: 'Spanish',
-        d: 'Arabic',
-      },
-      correct: 'c',
-      selected: null,
-    },
+    
     {
       text: 'How many minutes are in a full week?',
       answers: {
