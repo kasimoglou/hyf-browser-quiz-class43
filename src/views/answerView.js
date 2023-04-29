@@ -1,5 +1,5 @@
 const questionsNum = 10;
-let score = 0;
+export let score = 0;
 let answerSelected = false;
 
 /**

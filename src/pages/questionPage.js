@@ -7,6 +7,8 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
+import { score } from '../views/answerView.js';
+// import { initWelcomePage } from './welcomePage.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -31,6 +33,19 @@ export const initQuestionPage = () => {
 
     answerElement.addEventListener('click', () => {});
   }
+  // const showResultBtn = document.getElementById(SHOW_RESULT_BUTTON_ID);
+
+  if (quizData.currentQuestionIndex === quizData.questions.length - 1) {
+    // showResultBtn.style.display = 'block';
+    result();
+  }
+  // } else {
+  // showResultBtn.style.display = 'none';
+  // }
+
+  // document
+  //   .getElementById(SHOW_RESULT_BUTTON_ID)
+  //   .addEventListener('click', result);
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
@@ -39,6 +54,23 @@ export const initQuestionPage = () => {
   document
     .getElementById(SKIP_QUESTION_BUTTON_ID)
     .addEventListener('click', skipQuestion);
+};
+
+const result = () => {
+  const userInterface = document.getElementById(USER_INTERFACE_ID);
+  userInterface.innerHTML = '';
+
+  const resultElement = document.createElement('div');
+  resultElement.innerText = `You got ${score} out of ${quizData.questions.length} questions correct!`;
+
+  // const restartButton = document.createElement('button');
+  // restartButton.innerText = 'Restart Quiz';
+  // restartButton.addEventListener('click', () => {
+  //   initWelcomePage();
+  // });
+
+  // resultElement.appendChild(restartButton);
+  userInterface.appendChild(resultElement);
 };
 
 const skipQuestion = () => {
