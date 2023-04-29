@@ -30,7 +30,7 @@ export const initQuestionPage = () => {
     );
     answersListElement.appendChild(answerElement);
 
-    answerElement.addEventListener('click', () => {});
+    //answerElement.addEventListener('click', () => {});
   }
   // const showResultBtn = document.getElementById(SHOW_RESULT_BUTTON_ID);
 
@@ -70,7 +70,7 @@ const result = () => {
   else if (`${score}` < 5) {
     resultElement.innerText = `You Completed the Quiz with ${score} out of ${quizData.questions.length -1}, you can always try again 😕`
   }
-  resultElement.style.fontSize = '1.5rem'
+  resultElement.style.fontSize = '2rem'
   // const restartButton = document.createElement('button');
   // restartButton.innerText = 'Restart Quiz';
   // restartButton.addEventListener('click', () => {
