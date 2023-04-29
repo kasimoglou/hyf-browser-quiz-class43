@@ -61,7 +61,7 @@ const result = () => {
   userInterface.innerHTML = '';
 
   const resultElement = document.createElement('div');
-  resultElement.innerText = `Congrats on Completing the Quiz!!\nYou got ${score} out of ${quizData.questions.length} questions correct!`;
+  resultElement.innerText = `Congratulations on Completing the Quiz!!\nYou got ${score} out of ${quizData.questions.length} questions correct!`;
 
   // const restartButton = document.createElement('button');
   // restartButton.innerText = 'Restart Quiz';
