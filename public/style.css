@@ -71,8 +71,10 @@ ul {
   border-style: dashed;
   text-transform: capitalize;
 }
-
-
+#answers-list li:hover{
+  color:#c1d3fe;
+  font-size: 1.5rem;
+}
 .welcome{
   font-size: 5em;
 }
