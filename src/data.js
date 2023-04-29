@@ -16,10 +16,10 @@ export const quizData = {
       {
         text: 'What country has the highest life expectancy?',
         answers: {
-          a: 'Ethiopia',
-          b: 'Hong kong',
-          c: 'Zambia',
-          d: 'Syria',
+          a : 'Ethiopia',
+          b : 'Hong kong',
+          c : 'Zambia',
+          d : 'Syria',
         },
         correct: 'b',
         selected: null,
@@ -27,15 +27,15 @@ export const quizData = {
       {
         text: 'Where would you be if you were standing on the Spanish Steps?',
         answers: {
-          a: 'sicily',
-          b: 'italy',
-          c: 'mexico',
+          a: 'Sicily',
+          b: 'Italy',
+          c: 'Mexico',
           d: 'Rome',
         },
         correct: 'd',
         selected: null,
       },
-      // Add more questions here
+     
       {
         text: 'Which language has the more native speakers?',
         answers: {
@@ -70,12 +70,12 @@ export const quizData = {
         selected: null,
       },
       {
-        text: 'what is "usb" stands for ?',
+        text: 'What does "USB" stand for?',
         answers: {
-          a: 'users should beware',
-          b: 'unique serial baby',
+          a: 'Users Should Beware',
+          b: 'Unique Serial Baby',
           c: 'Universal Serial Bus',
-          d: 'universal series branch',
+          d: 'universal series Branch',
         },
         correct: 'c',
         selected: null,
@@ -83,21 +83,21 @@ export const quizData = {
       {
         text: 'What does KFC stand for?',
         answers: {
-          a: 'king fry chicken',
-          b: 'kentucky fry chiptole',
+          a: 'king Fry Chicken',
+          b: 'kentucky Fry Chipotle',
           c: 'Kentucky Fried Chicken',
-          d: 'knife fighters club ',
+          d: 'knife Fighters Club ',
         },
         correct: 'c',
         selected: null,
       },
       {
-        text: 'in friends tv show what is joey catchphrase',
+        text: "In Friends TV show, what is Joey's catchphrase?",
         answers: {
           a: 'HOW YOU DOIN?',
           b: 'HEY, YOU?',
           c: 'OMG!!',
-          d: 'Chandler bing',
+          d: 'WHO IS YOU?',
         },
         correct: 'a',
         selected: null,
@@ -108,16 +108,16 @@ export const quizData = {
           a: 'The joker',
           b: 'Alfred',
           c: 'Bruce',
-          d: 'chandler',
+          d: 'Chandler',
         },
         correct: 'b',
         selected: null,
       },
       {
-        text: 'what is the capital city of Netherlands?',
+        text: 'What is the capital city of Netherlands?',
         answers: {
           a: 'Berlin',
-          b: 'Den Haag',
+          b: 'Den Hague',
           c: 'Amsterdam',
           d: 'Alkmaar',
         },
