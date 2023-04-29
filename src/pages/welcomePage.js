@@ -1,4 +1,5 @@
 import { USER_INTERFACE_ID, START_QUIZ_BUTTON_ID } from '../constants.js';
+import { quizData } from '../data.js';
 import { createWelcomeElement } from '../views/welcomeView.js';
 import { initQuestionPage } from './questionPage.js';
 
@@ -12,9 +13,9 @@ export const initWelcomePage = () => {
   document
     .getElementById(START_QUIZ_BUTTON_ID)
     .addEventListener('click', startQuiz);
-  
 };
 
 const startQuiz = () => {
+  quizData.currentQuestionIndex = 0;
   initQuestionPage();
 };
