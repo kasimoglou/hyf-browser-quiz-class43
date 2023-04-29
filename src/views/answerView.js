@@ -18,7 +18,7 @@ export const createAnswerElement = (key, answerText, correct) => {
   answerSelected = false;
 
   const scoreElement = document.getElementById('score');
-  scoreElement.innerHTML = `Score: ${score}/${questionsNum}`;
+  scoreElement.innerHTML = `SCORE: ${score}/${questionsNum}`;
 
   element.addEventListener('click', () => {
     if (!answerSelected) {

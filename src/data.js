@@ -13,6 +13,7 @@ export const quizData = {
   currentQuestionIndex: 0,
   // the questions in the quiz
   questions: [
+
     {
       text: 'What country has the highest life expectancy?',
       answers: {
@@ -43,6 +44,41 @@ export const quizData = {
         b: 'English',
         c: 'Spanish',
         d: 'Arabic',
+
+      {
+        text: 'What country has the highest life expectancy?',
+        answers: {
+          a : 'Ethiopia',
+          b : 'Hong kong',
+          c : 'Zambia',
+          d : 'Syria',
+        },
+        correct: 'b',
+        selected: null,
+      },
+      {
+        text: 'Where would you be if you were standing on the Spanish Steps?',
+        answers: {
+          a: 'Sicily',
+          b: 'Italy',
+          c: 'Mexico',
+          d: 'Rome',
+        },
+        correct: 'd',
+        selected: null,
+      },
+     
+      {
+        text: 'Which language has the more native speakers?',
+        answers: {
+          a: 'French',
+          b: 'English',
+          c: 'Spanish',
+          d: 'Arabic',
+        },
+        correct: 'c',
+        selected: null,
+
       },
       correct: 'c',
       selected: null,
@@ -66,6 +102,7 @@ export const quizData = {
         c: '114',
         d: '100',
       },
+
       correct: 'b',
       selected: null,
     },
@@ -120,6 +157,60 @@ export const quizData = {
         b: 'Den Haag',
         c: 'Amsterdam',
         d: 'Alkmaar',
+      {
+        text: 'What does "USB" stand for?',
+        answers: {
+          a: 'Users Should Beware',
+          b: 'Unique Serial Baby',
+          c: 'Universal Serial Bus',
+          d: 'universal series Branch',
+        },
+        correct: 'c',
+        selected: null,
+      },
+      {
+        text: 'What does KFC stand for?',
+        answers: {
+          a: 'king Fry Chicken',
+          b: 'kentucky Fry Chipotle',
+          c: 'Kentucky Fried Chicken',
+          d: 'knife Fighters Club ',
+        },
+        correct: 'c',
+        selected: null,
+      },
+      {
+        text: "In Friends TV show, what is Joey's catchphrase?",
+        answers: {
+          a: 'HOW YOU DOIN?',
+          b: 'HEY, YOU?',
+          c: 'OMG!!',
+          d: 'WHO IS YOU?',
+        },
+        correct: 'a',
+        selected: null,
+      },
+      {
+        text: 'What is Batman’s butler called?',
+        answers: {
+          a: 'The joker',
+          b: 'Alfred',
+          c: 'Bruce',
+          d: 'Chandler',
+        },
+        correct: 'b',
+        selected: null,
+      },
+      {
+        text: 'What is the capital city of Netherlands?',
+        answers: {
+          a: 'Berlin',
+          b: 'Den Hague',
+          c: 'Amsterdam',
+          d: 'Alkmaar',
+        },
+        correct: 'c',
+        selected: null,
       },
       correct: 'c',
       selected: null,
