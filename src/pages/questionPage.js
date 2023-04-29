@@ -42,14 +42,13 @@ export const initQuestionPage = () => {
 
 
 const skipQuestion = () => {
-   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
- 
- 
-   if (quizData.currentQuestionIndex === quizData.questions.length && selected ) {
-     answerElement.style.backgroundColor = 'green';
-   }
-    
-   nextQuestion();
+   const currentQuestion = quizData.questions[quizData.currentQuestionIndex];
+
+    correctAnswer(currentQuestion.correct);
+
+    setTimeout(nextQuestion, 2000);
+
+   
  };
 
 
@@ -73,3 +72,10 @@ const nextQuestion = () => {
 };
 
 
+
+export const correctAnswer = (correct) =>{
+  if (document.querySelector(`li[dataSet="${correct}"]`)) {
+      document.querySelector( `li[dataSet="${correct}"]` ).style.backgroundColor = 'green';
+      
+    }
+  }

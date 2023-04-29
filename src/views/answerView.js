@@ -2,7 +2,7 @@
   const questionsNum = 10;
   let score = 0;
   let answerSelected = false;
-
+  
 
 
 
@@ -12,9 +12,9 @@
  */
 
 
+import {correctAnswer}from '../pages/questionPage.js';
 
-
-export const createAnswerElement = (key, answerText, correct, selected ) => {
+export const createAnswerElement = (key, answerText, correct ) => {
   const element = document.createElement('li');
   element.innerHTML = String.raw`
     ${key}: ${answerText}
@@ -47,22 +47,23 @@ export const createAnswerElement = (key, answerText, correct, selected ) => {
 
        if (key === correct) {
       score++;
+     
       element.style.backgroundColor = 'green';
       
     } else {
       element.style.backgroundColor = 'red';
-
-      if (document.querySelector(`li[dataSet="${correct}"]`)) {
-        document.querySelector( `li[dataSet="${correct}"]` ).style.backgroundColor = 'green';
-        
-      }
+      correctAnswer(correct);
     }
-    
+
+
+
+
     answerSelected = true;
     
     scoreElement.innerHTML = `Score: ${score}/${questionsNum}`;
-  }
 
+  }
+ 
   });
  
   element.setAttribute('dataSet', key);
@@ -70,3 +71,4 @@ export const createAnswerElement = (key, answerText, correct, selected ) => {
 };
 
 
+ 
