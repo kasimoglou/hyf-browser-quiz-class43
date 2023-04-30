@@ -8,7 +8,8 @@ document.title = 'General Knowledge Quiz';
 export const createWelcomeElement = () => {
   const element = document.createElement('div');
   element.innerHTML = String.raw`
-    <h1 class ="welcome">Welcome</h1>
+   <h3 class = "welcome">Welcome To Our</h3>
+    <h2 class ="title">General Knowledge Quiz <img src="favicon.png" alt="Favicon" class="favicon" width=45 height=45></h2>
     <button id="${START_QUIZ_BUTTON_ID}">start quiz</button>
   `;
   return element;

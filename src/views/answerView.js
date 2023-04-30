@@ -21,22 +21,12 @@ export const createAnswerElement = (key, answerText, correct) => {
   scoreElement.innerHTML = `SCORE: ${score}/${questionsNum}`;
 
   element.addEventListener('click', () => {
-    if (!answerSelected) {
-      const answerEls = document.querySelectorAll('li');
-      answerEls.forEach((el) => {
-        if (el.getAttribute('dataSet') !== correct) {
-          el.style.pointerEvents = 'none';
-        }
-        el.style.fontWeight = '';
-        el.style.backgroundColor = '';
-      });
-
-      element.style.fontWeight = 'bold';
-
+   
+    if(!answerSelected){
       if (key === correct) {
         score++;
-
-        element.style.backgroundColor = 'green';
+        element.style.fontWeight = 'bold';
+        correctAnswer(correct);
       } else {
         element.style.backgroundColor = 'red';
         correctAnswer(correct);
@@ -47,7 +37,6 @@ export const createAnswerElement = (key, answerText, correct) => {
       scoreElement.innerHTML = `Score: ${score}/${questionsNum}`;
     }
   });
-
   element.setAttribute('dataSet', key);
   return element;
 };

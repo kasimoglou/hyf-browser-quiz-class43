@@ -30,7 +30,6 @@ export const initQuestionPage = () => {
     );
     answersListElement.appendChild(answerElement);
 
-    //answerElement.addEventListener('click', () => {});
   }
   // const showResultBtn = document.getElementById(SHOW_RESULT_BUTTON_ID);
 
@@ -60,7 +59,6 @@ const result = () => {
   userInterface.innerHTML = '';
 
    const resultElement = document.createElement('div');
-//  resultElement.innerText = `Congratulations on Completing the Quiz!!\nYou got ${score} out of ${quizData.questions.length} questions correct!`;
   if (`${score}` > 7) {
     resultElement.innerText = `Congratulations on Completing the Quiz with ${score} out of ${quizData.questions.length -1}!! 🎉🎉🎉`
   }
