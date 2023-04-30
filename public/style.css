@@ -15,33 +15,31 @@
 body{
   background-color: black;
   color:white;
+  cursor: pointer;
   
 }
 
 ul {
   list-style: none;
+  
 }
 
 .question {
   font-size: 45px;
-  justify-content: center;
 }
 
 
 
 #next-question-button { 
   padding: 10px;
-  cursor: pointer;
   border-radius: 5px;
   text-transform: capitalize;
   padding: 0.5em 1em;
-  display: inline-block;
-  justify-content: space-between;
   margin: 1em 3em 1em 3em;
   background-color: #d8e3e3;
   letter-spacing: 0.15em;
-
 }
+
 #next-question-button:hover{
   background-color: rgb(115, 115, 188);
  
@@ -52,7 +50,6 @@ ul {
   letter-spacing: 0.15em;
   padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
   padding: 0.5em 1em;
   background-color: #d8e3e3;
 }
@@ -61,7 +58,7 @@ ul {
 }
 
 #answers-list {
-  list-style-type: none;
+  list-style: none;
 }
 
 #answers-list li {
@@ -76,7 +73,10 @@ ul {
   font-size: 1.5rem;
 }
 .welcome{
-  font-size: 5em;
+  font-size: 2em;
+}
+.title{
+  font-size:4em;
 }
 
 #start-quiz-button {
@@ -99,7 +99,7 @@ ul {
 #start-quiz-button:before {
   content: '';
   position: absolute;
-  top: 0;
+  top:0;
   left: -100%;
   width: 100%;
   height: 100%;
